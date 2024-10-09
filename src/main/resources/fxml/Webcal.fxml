@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="window" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="813.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="alfdozen.es_2023_2sem_terca_teira_leipl_grupoa.ControllerWebCall">
+   <children>
+      <Button fx:id="backButton" layoutX="340.0" layoutY="560.0" minHeight="60.0" minWidth="130.0" mnemonicParsing="false" onAction="#returnHome" prefHeight="60.0" prefWidth="130.0" text="Cancelar" />
+      <Button fx:id="importSchedule" layoutX="340.0" layoutY="263.0" minHeight="60.0" minWidth="130.0" mnemonicParsing="false" onAction="#importScheduleFromWebcal" prefHeight="60.0" prefWidth="130.0" text="Importar Horário" visible="false" />
+      <Button fx:id="viewSchedule" layoutX="340.0" layoutY="365.0" minHeight="60.0" minWidth="130.0" mnemonicParsing="false" onAction="#viewSchedule" prefHeight="60.0" prefWidth="130.0" text="Consultar Horário" textAlignment="CENTER" visible="false" wrapText="true">
+         <tooltip>
+            <Tooltip text="São válidos apenas os formatos .JSON e .CSV" />
+         </tooltip>
+      </Button>
+      <Button fx:id="saveCSV" layoutX="243.0" layoutY="461.0" minHeight="60.0" minWidth="130.0" mnemonicParsing="false" onAction="#saveCSV" prefHeight="60.0" prefWidth="130.0" text="Guardar em CSV" visible="false" />
+      <Button fx:id="saveJSON" layoutX="429.0" layoutY="461.0" minHeight="60.0" minWidth="130.0" mnemonicParsing="false" onAction="#saveJSON" prefHeight="60.0" prefWidth="130.0" text="Guardar em JSON" visible="false" />
+      <Label layoutX="243.0" layoutY="116.0" text="Insira o link do seu calendário pessoal da plataforma do Fénix" />
+      <TextField fx:id="webcalURLTextField" layoutX="241.0" layoutY="149.0" minHeight="25.0" minWidth="330.0" onKeyTyped="#dealWithText" prefHeight="25.0" prefWidth="330.0" />
+   </children>
+</AnchorPane>
